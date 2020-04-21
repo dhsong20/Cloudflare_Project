@@ -2,6 +2,8 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
+// elementHandler class parses through response and individuals elements in response
+
 class elementHandler {
   constructor(variantNum, attributeName, id) {
     this.variantNum = variantNum;
@@ -53,6 +55,8 @@ class elementHandler {
     }
   }
 }
+
+// handles request, called from eventListener
 
 async function handleRequest(request) {
   try {
